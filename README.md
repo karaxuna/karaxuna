@@ -1,7 +1,7 @@
-KoGL ([demo](http://karaxuna.github.io/KoGL/))
+karaxuna ([demo](http://karaxuna.github.io/KoGL/))
 ====
 
-WebGL library
+Karaxuna website
 
 ```
 git checkout master # you can avoid this line if you are in master...

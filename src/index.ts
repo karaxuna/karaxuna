@@ -193,6 +193,6 @@ let letters = {
 let scene = document.getElementById('scene');
 let links = document.getElementById('links');
 
-scene.appendChild(createText('karaxuna', 'div', 2));
-links.appendChild(createLink('so ', 'https://stackoverflow.com/users/1265753/karaxuna', 1, 'orange'));
-links.appendChild(createLink('github', 'https://github.com/karaxuna', 1, 'grey'));
+scene.appendChild(createText('karaxuna', 'div', 2, '#4caf50'));
+links.appendChild(createLink('so ', 'https://stackoverflow.com/users/1265753/karaxuna', 1, '#f69c55'));
+links.appendChild(createLink('github', 'https://github.com/karaxuna', 1, '#484c4f'));

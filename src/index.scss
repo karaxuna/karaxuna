@@ -2,6 +2,19 @@ html,
 body {
     height: 100%;
     width: 100%;
+    font-size: 15px;
+}
+
+@media (max-width: 840px) {
+    body {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 530px) {
+    body {
+        font-size: 7px;
+    }
 }
 
 body {
@@ -39,11 +52,13 @@ body {
 }
 
 .figure {
-    display: grid;
+    position: relative;
+    margin-left: .1em;
+    margin-right: .1em;
 }
 
 .cube {
-    position: relative;
+    position: absolute;
     transform-style: preserve-3d;
     transition: transform 1s;
     width: 1em;

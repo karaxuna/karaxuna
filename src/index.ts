@@ -3,7 +3,6 @@ import './index.scss';
 function createCube(size = 1, color = 'green') {
     let container = document.createElement('div');
     container.className = 'cube';
-    container.style.fontSize = size * 5 + 'px';
 
     let front = document.createElement('div');
     front.className = 'cube__side cube__side--front';
@@ -44,15 +43,16 @@ function createFigure(matrix: number[][], size = 1, color = 'green'): any {
         cube;
 
     let container = document.createElement('div');
-    container.style.margin = size * 2 + 'px';
-    container.className += ' figure';
+    container.classList.add('figure');
+    container.style.width = matrix[0].length + 'em';
+    container.style.height = matrix.length + 'em';
 
     for (y = 0; y < matrix.length; y++) {
         for (x = 0; x < matrix[y].length; x++) {
             if (matrix[y][x]) {
                 cube = createCube(size, color);
-                cube.style.gridRow = y + 1;
-                cube.style.gridColumn = x + 1;
+                cube.style.top = y + 'em';
+                cube.style.left = x + 'em';
                 container.appendChild(cube);
             }
         }
@@ -66,21 +66,23 @@ function createText(text, tagName = 'div', size = 1, color = 'green'): any {
     container.className = 'text';
 
     text.split('').forEach(letter => {
+        let figure;
         if (letter === ' ') {
-            let empty = document.createElement('div');
-            empty.style.width = size * 8 + 'px';
-            container.appendChild(empty);
+            figure = document.createElement('div');
+            figure.style.width = size * 8 + 'px';
+            
         }
         else {
-            container.appendChild(createFigure(letters[letter], size, color));
+            figure = createFigure(letters[letter], size, color);
         }
+        container.appendChild(figure);
     });
 
     container.addEventListener('animationend', e => {
         container.classList.remove('text--animating');
     });
 
-    container.addEventListener('mouseover', e => {
+    container.addEventListener('mouseenter', e => {
         container.classList.add('text--animating');
     });
 

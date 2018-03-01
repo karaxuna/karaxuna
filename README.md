@@ -1,4 +1,4 @@
-karaxuna ([demo](http://karaxuna.github.io/KoGL/))
+karaxuna ([demo](http://karaxuna.github.io/karaxuna/))
 ====
 
 Karaxuna website

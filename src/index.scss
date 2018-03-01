@@ -31,6 +31,29 @@ body {
     perspective-origin: 111% 1129px;
 }
 
+a {
+    color: #07a;
+}
+
+#note {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    text-decoration: none;
+    color: #000;
+    background: #ffc;
+    display: block;
+    height: 150px;
+    width: 150px;
+    padding: 15px;
+    font-size: 14px;
+    box-shadow: 5px 5px 7px #e3e3b6;
+    transition: transform .15s linear;
+    transform: rotate(-6deg);
+    font-family: monospace;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+
 #links {
     display: flex;
     align-items: center;
